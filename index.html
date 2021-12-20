@@ -1,0 +1,22 @@
+<html>
+    <!-- from unpkg -->
+    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.0/widget.module.min.js" async defer></script>
+    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.0/widget.min.js" async defer></script>
+
+    <!-- OR from jsdelivr -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.0/widget.module.min.js" async defer></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.0/widget.min.js" async defer></script>
+
+  <head>
+    <title>Href Attribute Example</title>
+  </head>
+  <body>
+    <div class="frc-captcha" data-sitekey="FCMGEMUD2NNITJUP" data-start="auto" data-puzzle-endpoint="https://eu-api.friendlycaptcha.eu/api/v1/puzzle" data-callback="myCallback"></div>
+
+    <script>
+    function myCallback(solution) {
+        console.log("Captcha finished with solution " + solution);
+    }
+    </script>
+  </body>
+</html>
