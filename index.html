@@ -11,12 +11,20 @@
     <title>Href Attribute Example</title>
   </head>
   <body>
-    <div class="frc-captcha" data-sitekey="FCMGEMUD2NNITJUP" data-start="auto" data-puzzle-endpoint="https://eu-api.friendlycaptcha.eu/api/v1/puzzle" data-callback="myCallback"></div>
+    <div class="frc-captcha" data-sitekey="FCMGEMUD2NNITJUP" data-start="auto" data-puzzle-endpoint="https://eu-api.friendlycaptcha.eu/api/v1/puzzle" data-callback="addElement"></div>
 
     <script>
-    function myCallback(solution) {
-        console.log(solution);
-    }
+      function addElement (solution) {
+        // erstelle ein neues div Element
+        // und gib ihm etwas Inhalt
+        var newDiv = document.createElement("div");
+        var newContent = document.createTextNode(solution);
+        newDiv.appendChild(newContent); // füge den Textknoten zum neu erstellten div hinzu.
+
+        // füge das neu erstellte Element und seinen Inhalt ins DOM ein
+        var currentDiv = document.getElementById("div1");
+        document.body.insertBefore(newDiv, currentDiv);
+      }
     </script>
   </body>
 </html>
